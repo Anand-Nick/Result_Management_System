@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="container mt-5">
+
+    <div class="p-5 mb-5 bg-primary text-white rounded text-center shadow">
+
+        <h1 class="display-4 fw-bold">
+            🎓 Student Result Management System
+        </h1>
+
+        <p class="lead mt-3">
+            Welcome to the Student Result Management System.
+            Students can view department-wise results and administrators
+            can manage student records using CRUD operations.
+        </p>
+
+        <a href="{{ url_for('login') }}" class="btn btn-light btn-lg mt-3">
+            Admin Login
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Departments -->
+<div class="container">
+
+    <h2 class="text-center mb-4">
+        Departments
+    </h2>
+
+    <div class="row">
+
+        <!-- CSE -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h3>💻 CSE</h3>
+
+                    <p>
+                        Computer Science & Engineering
+                    </p>
+
+                    <a href="{{ url_for('cse') }}"
+                       class="btn btn-primary">
+                        View Results
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- IT -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h3>🖥 IT</h3>
+
+                    <p>
+                        Information Technology
+                    </p>
+
+                    <a href="{{ url_for('it') }}"
+                       class="btn btn-success">
+                        View Results
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ECE -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h3>📡 ECE</h3>
+
+                    <p>
+                        Electronics & Communication
+                    </p>
+
+                    <a href="{{ url_for('ece') }}"
+                       class="btn btn-warning text-white">
+                        View Results
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Civil -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h3>🏗 Civil</h3>
+
+                    <p>
+                        Civil Engineering
+                    </p>
+
+                    <a href="{{ url_for('civil') }}"
+                       class="btn btn-info text-white">
+                        View Results
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mechanical -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h3>⚙ Mechanical</h3>
+
+                    <p>
+                        Mechanical Engineering
+                    </p>
+
+                    <a href="{{ url_for('mech') }}"
+                       class="btn btn-danger">
+                        View Results
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Features -->
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">
+        Features
+    </h2>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+
+                <div class="card-body">
+
+                    <h4>➕</h4>
+
+                    <h5>Add Results</h5>
+
+                    <p>
+                        Admin can add new student results.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+
+                <div class="card-body">
+
+                    <h4>✏</h4>
+
+                    <h5>Update</h5>
+
+                    <p>
+                        Edit student marks anytime.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+
+                <div class="card-body">
+
+                    <h4>🗑</h4>
+
+                    <h5>Delete</h5>
+
+                    <p>
+                        Remove incorrect records.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+
+                <div class="card-body">
+
+                    <h4>📊</h4>
+
+                    <h5>View Results</h5>
+
+                    <p>
+                        Department-wise result display.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-warning">
+
+            <h3>Edit Student Result</h3>
+
+        </div>
+
+        <div class="card-body">
+
+            <form method="POST">
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>Roll Number</label>
+
+                        <input
+                            type="text"
+                            name="roll_no"
+                            value="{{ student.roll_no }}"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>Student Name</label>
+
+                        <input
+                            type="text"
+                            name="name"
+                            value="{{ student.name }}"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>Department</label>
+
+                        <select
+                            name="department"
+                            class="form-control">
+
+                            <option value="CSE"
+                            {% if student.department=="CSE" %}
+                            selected
+                            {% endif %}>
+                            CSE
+                            </option>
+
+                            <option value="IT"
+                            {% if student.department=="IT" %}
+                            selected
+                            {% endif %}>
+                            IT
+                            </option>
+
+                            <option value="ECE"
+                            {% if student.department=="ECE" %}
+                            selected
+                            {% endif %}>
+                            ECE
+                            </option>
+
+                            <option value="CIVIL"
+                            {% if student.department=="CIVIL" %}
+                            selected
+                            {% endif %}>
+                            CIVIL
+                            </option>
+
+                            <option value="MECH"
+                            {% if student.department=="MECH" %}
+                            selected
+                            {% endif %}>
+                            MECH
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>Semester</label>
+
+                        <input
+                            type="number"
+                            name="semester"
+                            value="{{ student.semester }}"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Subject 1</label>
+
+                        <input
+                            type="number"
+                            name="subject1"
+                            value="{{ student.subject1 }}"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Subject 2</label>
+
+                        <input
+                            type="number"
+                            name="subject2"
+                            value="{{ student.subject2 }}"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Subject 3</label>
+
+                        <input
+                            type="number"
+                            name="subject3"
+                            value="{{ student.subject3 }}"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Subject 4</label>
+
+                        <input
+                            type="number"
+                            name="subject4"
+                            value="{{ student.subject4 }}"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Subject 5</label>
+
+                        <input
+                            type="number"
+                            name="subject5"
+                            value="{{ student.subject5 }}"
+                            class="form-control"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <button class="btn btn-warning">
+                    Update Result
+                </button>
+
+                <a href="{{ url_for('view_results') }}"
+                   class="btn btn-secondary">
+
+                    Back
+
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

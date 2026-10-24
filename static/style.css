@@ -1,0 +1,130 @@
+/* ===========================
+   Student Result Management System
+=========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,.25);
+}
+
+.card-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Tables */
+.table {
+    background: white;
+}
+
+.table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Dashboard cards */
+.card h3 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.display-4 {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    width: 100%;
+}
+
+footer h6 {
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 8px;
+}
+
+/* Badge */
+.badge {
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+
+    .display-4 {
+        font-size: 30px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .card h3 {
+        font-size: 28px;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+
+}

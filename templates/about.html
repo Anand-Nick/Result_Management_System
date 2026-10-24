@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+
+<h2>
+
+About Result Management System
+
+</h2>
+
+</div>
+
+<div class="card-body">
+
+<p>
+
+The Student Result Management System is a web application
+developed using Python, Flask, HTML, CSS and SQLite.
+
+</p>
+
+<h4>
+
+Features
+
+</h4>
+
+<ul>
+
+<li>✔ Admin Login</li>
+
+<li>✔ Add Student Result</li>
+
+<li>✔ Update Student Result</li>
+
+<li>✔ Delete Student Result</li>
+
+<li>✔ Search Student</li>
+
+<li>✔ Department Wise Result</li>
+
+<li>✔ Student Result Card</li>
+
+<li>✔ Automatic Grade Calculation</li>
+
+<li>✔ Pass / Fail Status</li>
+
+</ul>
+
+<h4>
+
+Technologies Used
+
+</h4>
+
+<table class="table table-bordered">
+
+<tr>
+
+<th>Frontend</th>
+
+<td>HTML5, CSS3, Bootstrap</td>
+
+</tr>
+
+<tr>
+
+<th>Backend</th>
+
+<td>Python Flask</td>
+
+</tr>
+
+<tr>
+
+<th>Database</th>
+
+<td>SQLite</td>
+
+</tr>
+
+<tr>
+
+<th>ORM</th>
+
+<td>Flask SQLAlchemy</td>
+
+</tr>
+
+</table>
+
+<div class="text-center">
+
+<a href="{{ url_for('home') }}"
+class="btn btn-primary">
+
+Back to Home
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

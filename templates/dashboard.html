@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="text-center text-primary mb-4">
+        📊 Admin Dashboard
+    </h2>
+
+    <!-- Dashboard Cards -->
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card text-white bg-primary shadow">
+                <div class="card-body text-center">
+                    <h3>{{ total_students }}</h3>
+                    <h5>Total Students</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card text-white bg-success shadow">
+                <div class="card-body text-center">
+                    <h3>{{ total_cse }}</h3>
+                    <h5>CSE Students</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card text-white bg-info shadow">
+                <div class="card-body text-center">
+                    <h3>{{ total_it }}</h3>
+                    <h5>IT Students</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card text-white bg-warning shadow">
+                <div class="card-body text-center">
+                    <h3>{{ total_ece }}</h3>
+                    <h5>ECE Students</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card text-white bg-danger shadow">
+                <div class="card-body text-center">
+                    <h3>{{ total_civil }}</h3>
+                    <h5>Civil Students</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card text-white bg-dark shadow">
+                <div class="card-body text-center">
+                    <h3>{{ total_mech }}</h3>
+                    <h5>Mechanical Students</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="card shadow mt-4">
+
+        <div class="card-header bg-secondary text-white">
+            <h4>Quick Actions</h4>
+        </div>
+
+        <div class="card-body text-center">
+
+            <a href="{{ url_for('add_result') }}"
+               class="btn btn-success btn-lg m-2">
+                ➕ Add Student Result
+            </a>
+
+            <a href="{{ url_for('view_results') }}"
+               class="btn btn-primary btn-lg m-2">
+                📋 View Results
+            </a>
+
+            <a href="{{ url_for('logout') }}"
+               class="btn btn-danger btn-lg m-2">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Search Student -->
+    <div class="card shadow mt-4">
+
+        <div class="card-header bg-info text-white">
+            <h4>Search Student</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form method="POST" action="{{ url_for('search') }}">
+
+                <div class="row">
+
+                    <div class="col-md-10">
+
+                        <input
+                            type="text"
+                            name="keyword"
+                            class="form-control"
+                            placeholder="Search by Roll Number or Student Name"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <button
+                            type="submit"
+                            class="btn btn-info text-white w-100">
+
+                            Search
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

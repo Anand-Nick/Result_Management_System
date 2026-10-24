@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="text-center text-info mb-4">
+        🖥 Information Technology (IT)
+    </h2>
+
+    {% if students %}
+
+    <table class="table table-bordered table-striped table-hover">
+
+        <thead class="table-dark">
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Semester</th>
+                <th>Total</th>
+                <th>Average</th>
+                <th>Grade</th>
+                <th>Result</th>
+                <th>View</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for student in students %}
+
+        <tr>
+
+            <td>{{ student.roll_no }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.semester }}</td>
+            <td>{{ student.total }}</td>
+            <td>{{ student.average }}</td>
+            <td>{{ student.grade }}</td>
+
+            <td>
+
+                {% if student.result=="PASS" %}
+                <span class="badge bg-success">PASS</span>
+                {% else %}
+                <span class="badge bg-danger">FAIL</span>
+                {% endif %}
+
+            </td>
+
+            <td>
+
+                <a href="{{ url_for('student_result', roll_no=student.roll_no) }}"
+                   class="btn btn-primary btn-sm">
+
+                    View
+
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+    <div class="alert alert-warning">
+        No IT Students Found.
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
